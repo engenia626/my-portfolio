@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高金枝 (Engenia) - AIGC导演作品集</title>
+    <!-- 引入 Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Outfit:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #FDFBF7;
+            color: #2C2C2C;
+        }
+        ::selection {
+            background-color: #D4C4B7;
+            color: white;
+        }
+        .font-serif { font-family: 'Noto Serif SC', serif; }
+        .font-sans { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .image-overlay {
+            background: linear-gradient(to top, rgba(20,20,20,0.85) 0%, rgba(20,20,20,0.4) 50%, rgba(20,20,20,0) 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="text-xl font-serif font-bold tracking-widest">ENGENIA.</div>
+            <div class="hidden md:flex space-x-8 text-sm tracking-widest text-[#555]">
+                <a href="#about" class="hover:text-black transition-colors">ABOUT</a>
+                <a href="#projects" class="hover:text-black transition-colors">PROJECTS</a>
+                <a href="#experience" class="hover:text-black transition-colors">EXPERIENCE</a>
+                <a href="#contact" class="hover:text-black transition-colors">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-5 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-br from-[#D4C4B7] to-transparent blur-[100px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-gradient-to-tl from-[#A8B2B0] to-transparent blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 z-10 w-full">
+            <div class="flex flex-col items-start max-w-4xl">
+                <span class="fade-in-up uppercase tracking-[0.3em] text-xs md:text-sm text-[#777] mb-6">Portfolio 2026</span>
+                <h1 class="fade-in-up delay-100 text-5xl md:text-7xl lg:text-8xl font-serif font-light leading-tight text-[#1A1A1A]">
+                    高金枝 <span class="text-[#888] font-sans text-3xl md:text-5xl lg:text-6xl italic ml-2">Engenia</span>
+                </h1>
+                <p class="fade-in-up delay-200 mt-8 text-xl md:text-3xl font-serif text-[#444] leading-relaxed">
+                    AIGC独立导演
+                </p>
+                <p class="fade-in-up delay-300 mt-6 text-base md:text-lg text-[#666] max-w-2xl font-light leading-loose border-l-2 border-[#D4C4B7] pl-6">
+                    "以审美和创意赋能AIGC创作。" <br/>
+                    致力于全链路内容创作，用流动的光影与前沿AI技术编织非凡叙事。跑通低成本、高审美的数字化制作流。
+                </p>
+                
+                <div class="fade-in-up delay-400 mt-12 flex items-center space-x-6">
+                    <a href="#projects" class="group flex items-center space-x-3 bg-[#2C2C2C] text-white px-8 py-4 rounded-full hover:bg-black transition-colors duration-300">
+                        <span class="text-sm tracking-wider">VIEW WORKS</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <div class="flex items-center space-x-2 text-[#777] text-sm">
+                        <i data-lucide="star" class="w-4 h-4 text-[#D4C4B7]" fill="currentColor"></i>
+                        <span>Libtv平台认证超创“先锋创作者”</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Works -->
+    <section id="projects" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="mb-20 flex flex-col md:flex-row md:items-end justify-between">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-light text-[#1A1A1A]">Selected Works.</h2>
+                    <p class="mt-4 text-[#666] tracking-widest text-sm uppercase">代表作品与导演项目</p>
+                </div>
+                <p class="mt-6 md:mt-0 max-w-md text-sm text-[#777] leading-relaxed">
+                    专注制作做有导演思维的精品AIGC视听作品。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                
+                <!-- 项目 1: 小雪 -->
+                <div class="group relative overflow-hidden bg-[#F8F8F8] cursor-pointer">
+                    <div class="aspect-[4/3] overflow-hidden relative" id="video-container-0">
+                        <!-- 注意：这里把图片链接换成你上传到Github的本地路径，例如 src="images/xiaoxue.jpg" -->
+                        <img src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&q=80&w=1200" alt="小雪" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        
+                        <div class="absolute inset-0 image-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white z-10 pointer-events-none">
+                            <p class="text-sm font-light mb-2 opacity-90">在「节气里的大美中国」24小时行业超创竞赛中，负责全片的场景构建与镜头语言设计，兼顾美学表达与技术落地，精准把控剧本叙事逻辑。</p>
+                            <div class="w-full h-[1px] bg-white/30 my-4"></div>
+                            <p class="text-xs font-semibold text-[#D4C4B7] tracking-wider uppercase">成就荣誉</p>
+                            <p class="text-sm font-serif mt-1">「非凡叙事团队」荣誉 | 央视、微博官方账号播出</p>
+                        </div>
+                        
+                        <button onclick="playVideo('video-container-0', 'https://player.bilibili.com/player.html?bvid=BV1i35u6oErS&page=1&autoplay=1&high_quality=1&danmaku=0')" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 hover:scale-110 hover:bg-white shadow-xl">
+                            <i data-lucide="video" class="w-6 h-6 text-black ml-1"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="py-6 px-2">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1 pr-4">
+                                <h3 class="font-serif text-[#222] text-[1.1rem] leading-snug font-medium mb-1">【《小雪》-中国网络视听大会24小时超创赛获奖作品】</h3>
+                                <p class="text-[#777] text-sm mt-1">24小时超创赛项目 <span class="mx-2">|</span> 2026.04</p>
+                            </div>
+                            <span class="text-xs border border-[#E0E0E0] px-3 py-1 rounded-full text-[#555] tracking-widest shrink-0 mt-1">执行导演</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 2: 缝一弯月亮在成都 -->
+                <div class="group relative overflow-hidden bg-[#F8F8F8] cursor-pointer md:mt-20">
+                    <div class="aspect-[4/3] overflow-hidden relative" id="video-container-2">
+                        <!-- 注意：这里把图片链接换成你上传到Github的本地路径，例如 src="images/moon.jpg" -->
+                        <img src="https://images.unsplash.com/photo-1543837173-6c26bc819785?auto=format&fit=crop&q=80&w=1200" alt="缝一弯月亮在成都" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        
+                        <div class="absolute inset-0 image-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white z-10 pointer-events-none">
+                            <p class="text-sm font-light mb-2 opacity-90">零成本极限创作。耗时7天实现从深度立意构思到高审美视觉产出的闭环，以“他乡亦故乡”的大学生视角切入，验证极高的算力利用率与创作效率。</p>
+                            <div class="w-full h-[1px] bg-white/30 my-4"></div>
+                            <p class="text-xs font-semibold text-[#D4C4B7] tracking-wider uppercase">成就荣誉</p>
+                            <p class="text-sm font-serif mt-1">“金芙蓉·发现文明之美”竞赛 二等奖（不分赛道）</p>
+                        </div>
+                        
+                        <button onclick="playVideo('video-container-2', 'https://player.bilibili.com/player.html?bvid=BV1jg5u6tEt2&page=1&autoplay=1&high_quality=1&danmaku=0')" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 hover:scale-110 hover:bg-white shadow-xl">
+                            <i data-lucide="video" class="w-6 h-6 text-black ml-1"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="py-6 px-2">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1 pr-4">
+                                <h3 class="font-serif text-[#222] text-[1.1rem] leading-snug font-medium mb-1">《缝一弯月亮在成都》</h3>
+                                <p class="text-[#777] text-sm mt-1">城市宣传片 <span class="mx-2">|</span> 2025.09</p>
+                            </div>
+                            <span class="text-xs border border-[#E0E0E0] px-3 py-1 rounded-full text-[#555] tracking-widest shrink-0 mt-1">导演</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 3: 沸腾江湖 -->
+                <div class="group relative overflow-hidden bg-[#F8F8F8] cursor-pointer">
+                    <div class="aspect-[4/3] overflow-hidden relative" id="video-container-1">
+                        <!-- 注意：这里把图片链接换成你上传到Github的本地路径，例如 src="images/feiteng.jpg" -->
+                        <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&q=80&w=1200" alt="沸腾江湖" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        
+                        <div class="absolute inset-0 image-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white z-10 pointer-events-none">
+                            <p class="text-sm font-light mb-2 opacity-90">全片制作成本控制在400元以内，实现AIGC在文旅题材中的商业化落地尝试。</p>
+                            <div class="w-full h-[1px] bg-white/30 my-4"></div>
+                            <p class="text-xs font-semibold text-[#D4C4B7] tracking-wider uppercase">成就荣誉</p>
+                            <p class="text-sm font-serif mt-1">校级电影节金奖 | AI瞰四川技术专项奖、综合三类奖 | 跟着影视游四川展播| 视听中国展播</p>
+                        </div>
+                        
+                        <button onclick="playVideo('video-container-1', 'https://player.bilibili.com/player.html?bvid=BV1G75u6XEZD&page=1&autoplay=1&high_quality=1&danmaku=0')" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 hover:scale-110 hover:bg-white shadow-xl">
+                            <i data-lucide="video" class="w-6 h-6 text-black ml-1"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="py-6 px-2">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1 pr-4">
+                                <h3 class="font-serif text-[#222] text-2xl">《沸腾江湖》</h3>
+                                <p class="text-[#777] text-sm mt-1">AI文旅动画短片 <span class="mx-2">|</span> 2025.06 - 2025.09</p>
+                            </div>
+                            <span class="text-xs border border-[#E0E0E0] px-3 py-1 rounded-full text-[#555] tracking-widest shrink-0 mt-1">导演 / 制片 / 后期</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目 4: 光影·双生 -->
+                <div class="group relative overflow-hidden bg-[#F8F8F8] cursor-pointer md:mt-20">
+                    <div class="aspect-[4/3] overflow-hidden relative" id="video-container-3">
+                        <!-- 注意：这里把图片链接换成你上传到Github的本地路径，例如 src="images/guangying.jpg" -->
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=1200" alt="光影·双生" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        
+                        <div class="absolute inset-0 image-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white z-10 pointer-events-none">
+                            <p class="text-sm font-light mb-2 opacity-90">高效产出，独立完成全链路工作。用时3天耗资50元完成精品非遗主题动画，攻克早期模型一致性问题，实现创意到高水准画面的快速转化。</p>
+                            <div class="w-full h-[1px] bg-white/30 my-4"></div>
+                            <p class="text-xs font-semibold text-[#D4C4B7] tracking-wider uppercase">成就荣誉</p>
+                            <p class="text-sm font-serif mt-1">中国影像创新大赛二等奖、NCDA国三、第二届四川省大学生非遗影像创新大赛、好创意大赛省一</p>
+                        </div>
+                        
+                        <button onclick="playVideo('video-container-3', 'https://player.bilibili.com/player.html?bvid=BV1iV5u6xEu2&page=1&autoplay=1&high_quality=1&danmaku=0')" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 hover:scale-110 hover:bg-white shadow-xl">
+                            <i data-lucide="video" class="w-6 h-6 text-black ml-1"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="py-6 px-2">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1 pr-4">
+                                <h3 class="font-serif text-[#222] text-2xl">《光影·双生》</h3>
+                                <p class="text-[#777] text-sm mt-1">非遗主题动画 <span class="mx-2">|</span> 2025.05 - 2025.06</p>
+                            </div>
+                            <span class="text-xs border border-[#E0E0E0] px-3 py-1 rounded-full text-[#555] tracking-widest shrink-0 mt-1">导演 / 全流程制作</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-32 bg-[#FDFBF7]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <!-- Left Column -->
+            <div class="lg:col-span-7">
+                <h2 class="text-3xl font-serif text-[#1A1A1A] mb-12">Experience.</h2>
+                
+                <div class="relative border-l border-[#E5E0D8] ml-3 space-y-12 pb-8">
+                    <div class="relative pl-10">
+                        <div class="absolute w-3 h-3 bg-[#D4C4B7] rounded-full left-[-6.5px] top-2"></div>
+                        <div class="text-sm text-[#888] tracking-widest mb-2">2025.06 - 2025.09</div>
+                        <h4 class="text-xl font-serif text-[#222]">成都传媒集团红星新闻网</h4>
+                        <div class="text-[#666] text-sm mb-4">视频编辑实习生</div>
+                        <ul class="space-y-3 text-sm text-[#555] leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-[#D4C4B7] mr-2">✦</span>
+                                <span><strong class="font-medium text-[#333]">AIGC 流程优化：</strong>针对素材匮乏痛点，引入 AI 生成高质量视觉素材，大幅提升原创视频生产效率。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#D4C4B7] mr-2">✦</span>
+                                <span><strong class="font-medium text-[#333]">全链路内容创作：</strong>策划文化栏目一档；独立完成信息流与微课剪辑，精准把控视觉节奏与传播网感。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#D4C4B7] mr-2">✦</span>
+                                <span><strong class="font-medium text-[#333]">资产管理：</strong>负责活动现场拍摄，优化媒体素材库分类管理，实现高效资产调用。</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-10">
+                        <div class="absolute w-3 h-3 bg-[#E5E0D8] rounded-full left-[-6.5px] top-2"></div>
+                        <div class="text-sm text-[#888] tracking-widest mb-2">2024 - 2028</div>
+                        <h4 class="text-xl font-serif text-[#222]">成都大学</h4>
+                        <div class="text-[#666] text-sm mb-3">广播电视编导 / 本科</div>
+                        <div class="text-sm text-[#555] leading-relaxed space-y-2">
+                            <p><strong class="font-medium text-[#333]">荣誉奖项：</strong>国家励志奖学金、校优秀学生干部、院十佳干事等。</p>
+                            <p><strong class="font-medium text-[#333]">专业成绩：</strong>专业排名前 5%。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:col-span-5 space-y-16">
+                <div>
+                    <h2 class="text-3xl font-serif text-[#1A1A1A] mb-8">Expertise.</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3 text-[#333]">
+                                <i data-lucide="layout" class="w-4 h-4 text-[#D4C4B7]"></i>
+                                <span class="font-medium tracking-wide">核心技能</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white border border-[#EBEBEB] text-sm text-[#666] rounded-full">vibe coding</span>
+                                <span class="px-4 py-2 bg-white border border-[#EBEBEB] text-sm text-[#666] rounded-full">导演思维</span>
+                                <span class="px-4 py-2 bg-white border border-[#EBEBEB] text-sm text-[#666] rounded-full">AIGC 流程优化</span>
+                                <span class="px-4 py-2 bg-white border border-[#EBEBEB] text-sm text-[#666] rounded-full">全链路内容创作</span>
+                                <span class="px-4 py-2 bg-white border border-[#EBEBEB] text-sm text-[#666] rounded-full">数字化办公</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3 text-[#333]">
+                                <i data-lucide="video" class="w-4 h-4 text-[#D4C4B7]"></i>
+                                <span class="font-medium tracking-wide">软件工具</span>
+                            </div>
+                            <p class="text-sm text-[#666] leading-relaxed bg-white p-5 border border-[#EBEBEB] rounded-xl">
+                                精通主流 AIGC 工具。熟练掌握剪映、Premiere Pro (PR)、After Effects (AE) 等专业后期软件，以及 Office 办公套件。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-serif text-[#1A1A1A] mb-8">Honors.</h2>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">Libtv平台</span>
+                            <span class="text-[#888] text-xs tracking-wider">认证超创“先锋创作者”</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">中国影像创新大赛</span>
+                            <span class="text-[#888] text-xs tracking-wider">二等奖</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">中国网络视听大会24小时超创赛</span>
+                            <span class="text-[#888] text-xs tracking-wider">非凡叙事团队</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">未来设计师 (NCDA)</span>
+                            <span class="text-[#888] text-xs tracking-wider">全国三等奖</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">蓝桥杯 AIGC 专项</span>
+                            <span class="text-[#888] text-xs tracking-wider">全国三等奖</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">四川省大学生非遗影像大赛</span>
+                            <span class="text-[#888] text-xs tracking-wider">一等奖</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-[#EBEBEB] group hover:border-[#D4C4B7] transition-colors">
+                            <span class="text-[#444] text-sm font-medium group-hover:text-[#222] transition-colors">金芙蓉·发现文明之美</span>
+                            <span class="text-[#888] text-xs tracking-wider">市级二等奖</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#1A1A1A] text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-serif font-light mb-6">Let's Create.</h2>
+                <p class="text-[#888] font-light max-w-sm leading-relaxed">
+                    期待在视觉交互设计与前沿影像领域，探索更多美的可能性。欢迎联系我。
+                </p>
+            </div>
+
+            <div class="flex flex-col space-y-4">
+                <a href="mailto:Engenia626@foxmail.com" class="group flex items-center space-x-4 p-4 rounded-xl hover:bg-[#2A2A2A] transition-colors border border-transparent hover:border-[#333]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A2A2A] group-hover:bg-[#D4C4B7] flex items-center justify-center transition-colors">
+                        <i data-lucide="mail" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <div class="text-[#666] text-xs tracking-widest uppercase mb-1">Email</div>
+                        <div class="text-sm tracking-wider">Engenia626@foxmail.com</div>
+                    </div>
+                </a>
+
+                <div class="group flex items-center space-x-4 p-4 rounded-xl hover:bg-[#2A2A2A] transition-colors border border-transparent hover:border-[#333]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A2A2A] group-hover:bg-[#D4C4B7] flex items-center justify-center transition-colors">
+                        <i data-lucide="phone" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <div class="text-[#666] text-xs tracking-widest uppercase mb-1">Phone</div>
+                        <div class="text-sm tracking-wider">182 8408 2194</div>
+                    </div>
+                </div>
+
+                <div class="group flex items-center space-x-4 p-4 rounded-xl hover:bg-[#2A2A2A] transition-colors border border-transparent hover:border-[#333]">
+                    <div class="w-10 h-10 rounded-full bg-[#2A2A2A] group-hover:bg-[#D4C4B7] flex items-center justify-center transition-colors">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <div class="text-[#666] text-xs tracking-widest uppercase mb-1">Location</div>
+                        <div class="text-sm tracking-wider">成都 (Chengdu, China)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-24 pt-8 border-t border-[#333] flex justify-between items-center text-xs text-[#555] tracking-widest">
+            <p>© 2026 ENGENIA. ALL RIGHTS RESERVED.</p>
+            <p>AIGC INDEPENFENT DIRECTOR </p>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化图标
+        lucide.createIcons();
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#FDFBF7]/90', 'backdrop-blur-md', 'py-4', 'shadow-sm');
+                nav.classList.remove('bg-transparent', 'py-6');
+            } else {
+                nav.classList.add('bg-transparent', 'py-6');
+                nav.classList.remove('bg-[#FDFBF7]/90', 'backdrop-blur-md', 'py-4', 'shadow-sm');
+            }
+        });
+
+        // 视频点击播放逻辑
+        function playVideo(containerId, iframeSrc) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `<iframe src="${iframeSrc}" class="w-full h-full border-0 absolute inset-0 z-20 bg-[#F8F8F8]" allowfullscreen sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>`;
+        }
+    </script>
+</body>
+</html>
